@@ -1,0 +1,2 @@
+- Ver dados com Beekeeper Studio;
+- Utilizar insomnia para testar os endpoints;
