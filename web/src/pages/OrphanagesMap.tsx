@@ -8,6 +8,10 @@ import { FiPlus } from 'react-icons/fi'
 
 import '../styles/pages/orphanages-map.css'
 
+import { Map, TileLayer } from 'react-leaflet'
+
+import 'leaflet/dist/leaflet.css'
+
 const OrphanagesMap = () => {
   return (
     <div id="page-map">
@@ -23,7 +27,13 @@ const OrphanagesMap = () => {
         </footer>
       </aside>
 
-      <div></div>
+      <Map
+        center={[-23.3154561,-51.1850698]}
+        zoom={13}
+        style={{width: '100%', height: '100%'}}
+      >
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+      </Map>
 
       <Link to="" className="create-orphanage">
         <FiPlus size={32} color="#fff"/>
