@@ -5,6 +5,7 @@ export default class OrphanagesView {
   render(orphanage: Orphanage) {
     const ImagesViewInstance = new ImagesView()
     return {
+      id: orphanage.id,
       name: orphanage.name,
       latitude: orphanage.latitude,
       longitude: orphanage.longitude,

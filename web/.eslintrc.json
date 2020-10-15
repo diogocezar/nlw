@@ -32,12 +32,15 @@
     "@typescript-eslint/ban-ts-comment": "off",
     "import/prefer-default-export": "off",
     "import/no-unresolved": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
       {
         "js": "never",
-        "ts": "never"
+        "ts": "never",
+        "tsx": "never"
       }
     ],
     "no-shadow": "off",
