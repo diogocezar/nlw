@@ -14,14 +14,14 @@ import { Feather, FontAwesome } from '@expo/vector-icons'
 import mapMarkerImg from '../../../assets/images/marker/marker.png'
 import { RectButton, TouchableOpacity } from 'react-native-gesture-handler'
 import { useRoute } from '@react-navigation/native'
-import OrphanageParamsInterface from '../../interfaces/OrphanageParamsInterface'
+import { ParamsDetailsInterface } from '../../interfaces/ParamsInterface'
 import OrphanageInterface from '../../interfaces/OrphanageInterface'
 import api from '../../services/api'
 
 export default function OrphanageDetails() {
   const [orphanage, setOrphanage] = useState<OrphanageInterface>()
   const route = useRoute()
-  const params = route.params as OrphanageParamsInterface
+  const params = route.params as ParamsDetailsInterface
   useEffect(() => {
     api.get(`orphanages/${params.id}`).then((response) => {
       setOrphanage(response.data)

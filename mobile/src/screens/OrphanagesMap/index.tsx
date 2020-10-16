@@ -9,7 +9,7 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useFocusEffect } from '@react-navigation/native'
 import api from '../../services/api'
 import OrphanagesInterface from '../../interfaces/OrphanageInterface'
 
@@ -18,9 +18,9 @@ const OrphanagesMap = () => {
 
   const [orphanages, setOrphanages] = useState<OrphanagesInterface[]>([])
 
-  useEffect(() => {
+  useFocusEffect(() => {
     api.get('orphanages').then((response) => setOrphanages(response.data))
-  }, [])
+  })
 
   const handleNavitageToOrphanageDetails = (id: number) => {
     navigation.navigate('OrphanageDetails', { id })
