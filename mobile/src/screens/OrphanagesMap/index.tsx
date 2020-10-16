@@ -51,7 +51,9 @@ const OrphanagesMap = () => {
       <View style={styles.footer}>
         <Text style={styles.footerText}>2 orfanados encontrados</Text>
         <TouchableOpacity
-          onPress={() => {}}
+          onPress={() => {
+            navigation.navigate('SelectMapPosition')
+          }}
           style={styles.createOrphanageButton}
         >
           <Feather name="plus" size={20} color="#fff"></Feather>
