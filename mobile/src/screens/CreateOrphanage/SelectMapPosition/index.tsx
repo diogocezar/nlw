@@ -19,8 +19,8 @@ export default function SelectMapPosition() {
       <MapView
         provider={PROVIDER_GOOGLE}
         initialRegion={{
-          latitude: -27.2092052,
-          longitude: -49.6401092,
+          latitude: -23.3154561,
+          longitude: -51.1850698,
           latitudeDelta: 0.008,
           longitudeDelta: 0.008,
         }}
